@@ -1,0 +1,26 @@
+.portfolio {
+    background-color: $dark;
+    color: $light;
+    &-item {
+        position: relative;
+        padding-top: 100%;
+        a {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            height: 100%;
+            color: inherit;
+        }
+        &__title {
+            position: absolute;
+            left: $delimiter * 2;
+            right: $delimiter * 2;
+            bottom: $delimiter *2;
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+    }
+}

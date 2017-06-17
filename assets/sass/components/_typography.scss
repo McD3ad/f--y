@@ -1,0 +1,59 @@
+p {
+    margin: 0 0 $delimiter;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0 0 $delimiter * 2;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: inherit;
+    line-height: 1.25;
+    margin-bottom: 0 0 $delimiter * 2;
+}
+
+a {
+    color: $dark;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $accent !important;
+    }
+}
+
+ul,
+ol {
+    @extend p;
+    margin: 0 0 $delimiter * 2;
+    &.no-style {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.text {
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}

@@ -1,0 +1,39 @@
+.row {
+    display: flex;
+    width: 100%;
+    padding: 0 $delimiter;
+    &.column {
+        padding: 0 $delimiter * 2;
+    }
+}
+
+.column {
+    padding: 0 $delimiter;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@for $i from 1 through $columns {
+    .small-#{$i} {
+        flex: 0 0 (100% / $columns * $i);
+        max-width: (100% / $columns * $i);
+    }
+}
+
+@for $i from 1 through $columns {
+    @media (min-width: 40em) {
+        .medium-#{$i} {
+            flex: 0 0 (100% / $columns * $i);
+            max-width: (100% / $columns * $i);
+        }
+    }
+}
+
+@for $i from 1 through $columns {
+    @media (min-width: 62.5em) {
+        .large-#{$i} {
+            flex: 0 0 (100% / $columns * $i);
+            max-width: (100% / $columns * $i);
+        }
+    }
+}
